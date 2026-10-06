@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>인덕원 아파트 매물 동향</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div>
+        <h1>인덕원 아파트 매물 동향</h1>
+        <p id="updated">데이터 로딩 중...</p>
+      </div>
+      <div class="badge">Naver Land Tracker</div>
+    </header>
+
+    <section id="summary" class="cards"></section>
+
+    <section class="panel">
+      <h2>단지별 최근 매물 수</h2>
+      <canvas id="countChart"></canvas>
+    </section>
+
+    <section class="panel">
+      <h2>최근 가격 변경</h2>
+      <div id="priceChanges"></div>
+    </section>
+
+    <section class="panel">
+      <h2>최근 신규 매물</h2>
+      <div id="newListings"></div>
+    </section>
+
+    <section class="panel">
+      <h2>최근 사라진 매물</h2>
+      <div id="removedListings"></div>
+    </section>
+
+    <section class="panel">
+      <h2>최근 매물 Snapshot</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>단지</th>
+              <th>수집시각</th>
+              <th>매물수</th>
+              <th>최저호가</th>
+              <th>10.3억 이하</th>
+            </tr>
+          </thead>
+          <tbody id="snapshotTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      개인 시장분석용. 데이터는 수집 시점의 네이버 부동산 매물 정보를 기준으로 합니다.
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
